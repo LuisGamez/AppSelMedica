@@ -1,0 +1,273 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>
+        Registro de Comidas del día
+      </ion-title>
+      <ion-buttons end>
+        <button ion-button (click)="logout()">
+          <ion-icon name="log-out"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content padding>
+
+    <ion-toolbar no-border-top>
+        <ion-segment [(ngModel)]="comidas"> 
+          <ion-segment-button value="desayuno">
+              Desayuno
+          </ion-segment-button>
+          <ion-segment-button value="almuerzo">
+              Almuerzo
+          </ion-segment-button>
+          <ion-segment-button value="col_mat">
+              Col Mat
+          </ion-segment-button>
+          <ion-segment-button value="comida_1">
+              Comida
+          </ion-segment-button>
+          <ion-segment-button value="col_ves">
+              Col Ves
+          </ion-segment-button>
+          <ion-segment-button value="cena">
+              Cena
+          </ion-segment-button>
+        </ion-segment>
+      </ion-toolbar>
+
+      <div [ngSwitch]="comidas">
+          <ion-list *ngSwitchCase="'desayuno'">
+              <ion-item>
+                <ion-label>Hora</ion-label>
+                <ion-select [(ngModel)]="hora_comida">
+                  <ion-option value="09:00:00">09:00 a.m.</ion-option>
+                  <ion-option value="09:30:00">09:30 a.m.</ion-option>
+                  <ion-option value="10:00:00">10:00 a.m.</ion-option>
+                  <ion-option value="10:30:00">10:30 a.m.</ion-option>
+                  <ion-option value="11:00:00">11:00 a.m.</ion-option>
+                  <ion-option value="11:30:00">11:30 a.m.</ion-option>
+                  <ion-option value="12:00:00">12:00 p.m.</ion-option>
+                  <ion-option value="12:30:00">12:30 p.m.</ion-option>
+                  <ion-option value="13:00:00">01:00 p.m.</ion-option>
+                </ion-select>
+              </ion-item>
+            
+            <ion-item>
+                <ion-label>Comidas</ion-label>
+                <ion-textarea name="description" rows="5"></ion-textarea>
+              </ion-item>
+              <ion-item>
+                  <button ion-button icon-left color="secondary">
+                      <ion-icon name="camera"></ion-icon>
+                      Tomar Foto
+                    </button>
+                </ion-item>
+                <ion-item>
+                    <img src="./assets/imgs/no-img.gif" width="80%"/>
+                </ion-item>
+                <ion-item>
+                    <button ion-button icon-left color="secondary">
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                        Guardar
+                      </button>
+                  </ion-item>
+            </ion-list>
+
+            <ion-list *ngSwitchCase="'almuerzo'">
+                <ion-item>
+                  <ion-label>Hora</ion-label>
+                  <ion-select [(ngModel)]="hora_comida">
+                    <ion-option value="09:00:00">09:00 a.m.</ion-option>
+                    <ion-option value="09:30:00">09:30 a.m.</ion-option>
+                    <ion-option value="10:00:00">10:00 a.m.</ion-option>
+                    <ion-option value="10:30:00">10:30 a.m.</ion-option>
+                    <ion-option value="11:00:00">11:00 a.m.</ion-option>
+                    <ion-option value="11:30:00">11:30 a.m.</ion-option>
+                    <ion-option value="12:00:00">12:00 p.m.</ion-option>
+                    <ion-option value="12:30:00">12:30 p.m.</ion-option>
+                    <ion-option value="13:00:00">01:00 p.m.</ion-option>
+                  </ion-select>
+                </ion-item>
+              
+              <ion-item>
+                  <ion-label>Comidas</ion-label>
+                  <ion-textarea name="description" rows="5"></ion-textarea>
+                </ion-item>
+                <ion-item>
+                    <button ion-button icon-left color="secondary">
+                        <ion-icon name="camera"></ion-icon>
+                        Tomar Foto
+                      </button>
+                  </ion-item>
+                  <ion-item>
+                      <img src="./assets/imgs/no-img.gif" width="80%"/>
+                  </ion-item>
+                  <ion-item>
+                      <button ion-button icon-left color="secondary">
+                          <ion-icon name="checkmark-circle"></ion-icon>
+                          Guardar
+                        </button>
+                    </ion-item>
+              </ion-list>
+
+              <ion-list *ngSwitchCase="'col_mat'">
+                  <ion-item>
+                    <ion-label>Hora</ion-label>
+                    <ion-select [(ngModel)]="hora_comida">
+                      <ion-option value="09:00:00">09:00 a.m.</ion-option>
+                      <ion-option value="09:30:00">09:30 a.m.</ion-option>
+                      <ion-option value="10:00:00">10:00 a.m.</ion-option>
+                      <ion-option value="10:30:00">10:30 a.m.</ion-option>
+                      <ion-option value="11:00:00">11:00 a.m.</ion-option>
+                      <ion-option value="11:30:00">11:30 a.m.</ion-option>
+                      <ion-option value="12:00:00">12:00 p.m.</ion-option>
+                      <ion-option value="12:30:00">12:30 p.m.</ion-option>
+                      <ion-option value="13:00:00">01:00 p.m.</ion-option>
+                    </ion-select>
+                  </ion-item>
+                
+                <ion-item>
+                    <ion-label>Comidas</ion-label>
+                    <ion-textarea name="description" rows="5"></ion-textarea>
+                  </ion-item>
+                  <ion-item>
+                      <button ion-button icon-left color="secondary">
+                          <ion-icon name="camera"></ion-icon>
+                          Tomar Foto
+                        </button>
+                    </ion-item>
+                    <ion-item>
+                        <img src="./assets/imgs/no-img.gif" width="80%"/>
+                    </ion-item>
+                    <ion-item>
+                        <button ion-button icon-left color="secondary">
+                            <ion-icon name="checkmark-circle"></ion-icon>
+                            Guardar
+                          </button>
+                      </ion-item>
+                    </ion-list>
+
+            <ion-list *ngSwitchCase="'comida_1'">
+                <ion-item>
+                  <ion-label>Hora</ion-label>
+                  <ion-select [(ngModel)]="hora_comida">
+                    <ion-option value="09:00:00">09:00 a.m.</ion-option>
+                    <ion-option value="09:30:00">09:30 a.m.</ion-option>
+                    <ion-option value="10:00:00">10:00 a.m.</ion-option>
+                    <ion-option value="10:30:00">10:30 a.m.</ion-option>
+                    <ion-option value="11:00:00">11:00 a.m.</ion-option>
+                    <ion-option value="11:30:00">11:30 a.m.</ion-option>
+                    <ion-option value="12:00:00">12:00 p.m.</ion-option>
+                    <ion-option value="12:30:00">12:30 p.m.</ion-option>
+                    <ion-option value="13:00:00">01:00 p.m.</ion-option>
+                  </ion-select>
+                </ion-item>
+              
+              <ion-item>
+                  <ion-label>Comidas</ion-label>
+                  <ion-textarea name="description" rows="5"></ion-textarea>
+                </ion-item>
+                <ion-item>
+                    <button ion-button icon-left color="secondary">
+                        <ion-icon name="camera"></ion-icon>
+                        Tomar Foto
+                      </button>
+                  </ion-item>
+                  <ion-item>
+                      <img src="./assets/imgs/no-img.gif" width="80%"/>
+                  </ion-item>
+                  <ion-item>
+                      <button ion-button icon-left color="secondary">
+                          <ion-icon name="checkmark-circle"></ion-icon>
+                          Guardar
+                        </button>
+                    </ion-item>
+              </ion-list>
+
+              <ion-list *ngSwitchCase="'col_ves'">
+                  <ion-item>
+                    <ion-label>Hora</ion-label>
+                    <ion-select [(ngModel)]="hora_comida">
+                      <ion-option value="09:00:00">09:00 a.m.</ion-option>
+                      <ion-option value="09:30:00">09:30 a.m.</ion-option>
+                      <ion-option value="10:00:00">10:00 a.m.</ion-option>
+                      <ion-option value="10:30:00">10:30 a.m.</ion-option>
+                      <ion-option value="11:00:00">11:00 a.m.</ion-option>
+                      <ion-option value="11:30:00">11:30 a.m.</ion-option>
+                      <ion-option value="12:00:00">12:00 p.m.</ion-option>
+                      <ion-option value="12:30:00">12:30 p.m.</ion-option>
+                      <ion-option value="13:00:00">01:00 p.m.</ion-option>
+                    </ion-select>
+                  </ion-item>
+                
+                <ion-item>
+                    <ion-label>Comidas</ion-label>
+                    <ion-textarea name="description" rows="5"></ion-textarea>
+                  </ion-item>
+                  <ion-item>
+                      <button ion-button icon-left color="secondary">
+                          <ion-icon name="camera"></ion-icon>
+                          Tomar Foto
+                        </button>
+                    </ion-item>
+                    <ion-item>
+                        <img src="./assets/imgs/no-img.gif" width="80%"/>
+                    </ion-item>
+                    <ion-item>
+                        <button ion-button icon-left color="secondary">
+                            <ion-icon name="checkmark-circle"></ion-icon>
+                            Guardar
+                          </button>
+                      </ion-item>
+                </ion-list>
+
+                <ion-list *ngSwitchCase="'cena'">
+                    <ion-item>
+                      <ion-label>Hora</ion-label>
+                      <ion-select [(ngModel)]="hora_comida">
+                        <ion-option value="09:00:00">09:00 a.m.</ion-option>
+                        <ion-option value="09:30:00">09:30 a.m.</ion-option>
+                        <ion-option value="10:00:00">10:00 a.m.</ion-option>
+                        <ion-option value="10:30:00">10:30 a.m.</ion-option>
+                        <ion-option value="11:00:00">11:00 a.m.</ion-option>
+                        <ion-option value="11:30:00">11:30 a.m.</ion-option>
+                        <ion-option value="12:00:00">12:00 p.m.</ion-option>
+                        <ion-option value="12:30:00">12:30 p.m.</ion-option>
+                        <ion-option value="13:00:00">01:00 p.m.</ion-option>
+                      </ion-select>
+                    </ion-item>
+                  
+                  <ion-item>
+                      <ion-label>Comidas</ion-label>
+                      <ion-textarea name="description" rows="5"></ion-textarea>
+                    </ion-item>
+                    <ion-item>
+                        <button ion-button icon-left color="secondary">
+                            <ion-icon name="camera"></ion-icon>
+                            Tomar Foto
+                          </button>
+                      </ion-item>
+                      <ion-item>
+                          <img src="./assets/imgs/no-img.gif" width="80%"/>
+                      </ion-item>
+                      <ion-item>
+                          <button ion-button icon-left color="secondary">
+                              <ion-icon name="checkmark-circle"></ion-icon>
+                              Guardar
+                            </button>
+                        </ion-item>
+                  </ion-list>
+
+                </div>
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar>
+      <ion-title> &copy; SelMedica</ion-title>
+    </ion-toolbar>
+  </ion-footer>

@@ -1,0 +1,41 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>
+        Tip de Ejercicio Semanal
+      </ion-title>
+      <ion-buttons end>
+        <button ion-button (click)="logout()">
+          <ion-icon name="log-out"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>  
+
+
+<ion-content padding>
+  <h3>Rutina de ejercicios en pareja</h3>
+  <p>{{username}}!</p>
+  <p>Esta semana traemos para ti esta completa rutina que podras realizar con tu pareja</p>
+  <p>La cual consta de los siguientes ejercicios:</p>
+<ul>
+  <li>30 sentadillas</li>
+  <li>50 Puñetazos</li>
+  <li>20 Lunges con salto</li>
+  <li>10 Flexiones</li>
+  <li>20 High five en plancha</li>
+  <li>40 Mounyain Climbers</li>
+  <li>20 Abdominales Spaiderman</li>
+  <li>25 SIT-UPS + Fist Bump</li>
+  <li>20 Twist Rusos</li>
+</ul>
+  <iframe width="95%"  src="https://www.youtube.com/embed/SSZ-Ax_kJh0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+  </iframe>
+</ion-content>
+<ion-footer>
+    <ion-toolbar>
+      <ion-title> &copy; SelMedica</ion-title>
+    </ion-toolbar>
+  </ion-footer>

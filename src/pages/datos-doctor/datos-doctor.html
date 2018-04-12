@@ -1,0 +1,64 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>
+        Datos de tu Nutriólogo
+      </ion-title>
+      <ion-buttons end>
+        <button ion-button (click)="logout()">
+          <ion-icon name="log-out"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>  
+  
+<ion-content padding>
+    <p>{{username}}!</p>
+    <p>Para cualquier duda, te proporcionamos los datos de tu nutriólogo.</p>
+    <img src="./assets/imgs/img-avatar2.png" width="150px" height="150px"/>
+
+<ion-list>
+    <ion-item>
+      <ion-label>Nombre</ion-label>
+      <ion-note item-end>Monica </ion-note>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Celular</ion-label>
+      <ion-note item-end>4444568978</ion-note>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>E-mail</ion-label>
+        <ion-note item-end>monica_nut@sel-medica.com</ion-note>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+      <ion-item>
+        <ion-label>Horario</ion-label>
+        <ion-note item-end>08:00 - 14:00</ion-note>
+      </ion-item>
+  </ion-list>
+
+
+<ion-list class="botones_contacto" >
+    <button ion-button (click)="logout()">
+        <ion-icon name="call"></ion-icon>
+      </button>
+
+      <button ion-button (click)="logout()">
+          <ion-icon name="chatbubbles"></ion-icon>
+        </button>
+
+</ion-list>
+
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar>
+      <ion-title> &copy; SelMedica</ion-title>
+    </ion-toolbar>
+  </ion-footer>

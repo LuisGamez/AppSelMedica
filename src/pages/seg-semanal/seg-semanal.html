@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Seguimiento Semanal
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <p>{{username}}!</p>
+    <p>Te mostramos tus gráficas de los seguimientos semanales por mes, para que puedas evaluar tus avances.</p>
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="paciente"> 
+      <ion-segment-button value="imc">
+          IMC
+      </ion-segment-button>
+      <ion-segment-button value="p_grasa">
+          &#37; de Grasa
+      </ion-segment-button>
+      <ion-segment-button value="peso">
+          Peso
+      </ion-segment-button>
+      <ion-segment-button value="comp">
+          Comparativa
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+  <div [ngSwitch]="paciente">
+      <ion-card *ngSwitchCase="'imc'">
+          <img src="./assets/imgs/imc-img.jpg" width="100%"/>
+          <ion-card-content>
+            <p>
+              Comentario acerca de los resultados que aroja la gráfica.
+            </p>
+          </ion-card-content>  
+      </ion-card>
+      <ion-card *ngSwitchCase="'p_grasa'">
+          <img src="./assets/imgs/pg-img.jpg" width="100%"/>
+          <ion-card-content>
+            <p>
+              Comentario acerca de los resultados que aroja la gráfica.
+            </p>
+          </ion-card-content>  
+      </ion-card>
+      <ion-card *ngSwitchCase="'peso'">
+          <img src="./assets/imgs/peso-img.jpg" width="100%"/>
+          <ion-card-content>
+            <p>
+              Comentario acerca de los resultados que aroja la gráfica.
+            </p>
+          </ion-card-content>  
+      </ion-card>
+
+      <ion-card *ngSwitchCase="'comp'">
+          <img src="./assets/imgs/comparativa-img.jpg" width="100%"/>
+          <ion-card-content>
+            <p>
+              Comentario acerca de los resultados que aroja la gráfica.
+            </p>
+          </ion-card-content>  
+      </ion-card>
+
+    </div>
+
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar>
+      <ion-title> &copy; SelMedica</ion-title>
+    </ion-toolbar>
+  </ion-footer>
