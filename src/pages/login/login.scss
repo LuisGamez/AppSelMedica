@@ -1,11 +1,32 @@
-page-login {
- 
+
+ @font-face {
+font-family: MyFont;
+src: url("../assets/fonts/breeserif-regular-webfont.ttf");
+}
+
+page-login { 
+
+ ion-header {
+        background: #010100;
+        font-family: 'MyFont' !important;
+
+        }
+
+
+
     .login-content {
-      background: #56CA96;
+      background-image: url("./../../assets/imgs/fondonutrisel.jpg");
+      background-position: top center;
+      background-size: cover;
+      /*background: #66B563;*/
+
+
+
+      
    
       .logo-row {
-        padding-top: 50px;
-        padding-bottom: 20px;
+        padding-top: 40px;
+        padding-bottom: 40px;
       }
    
       .login-box {
@@ -13,18 +34,26 @@ page-login {
         padding: 20px 20px 0px 20px;
         margin-top: 30px;
       }
-   
+
+      ion-title {
+           padding-left: 200px !important;
+        }
+
       ion-row {
          align-items: center;
          text-align: center;
        }
+
+       ion-nav {
+
+       }
    
        ion-item {
-           border-radius: 30px !important;
-           padding-left: 30px !important;
+           border-radius: 5px !important;
+           padding-left: 20px !important;
            font-size: 0.9em;
            margin-bottom: 10px;
-           border: 1px solid #ffffff;
+           border: 0px solid #ffffff;
            border-bottom: 0px !important;
            box-shadow: none !important;
        }
@@ -40,14 +69,15 @@ page-login {
        }
    
        .submit-btn {
-         background: #51CFB1;
-         border-radius: 30px !important;
-         border: 1px solid #ffffff;
+         background: #BCC930;
+         border-radius: 5px !important;
+         border: 1px solid #8FA227;
+         font-family: 'MyFont' !important;
        }
    
        .register-btn {
          color: #ffffff;
-         font-size: 0.8em;
+         font-size: 0.9em;
        }
     }
    
